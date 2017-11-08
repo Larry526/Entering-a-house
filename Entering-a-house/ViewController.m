@@ -16,14 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithTitle:@"Door" style:UIBarButtonItemStylePlain target:self action:@selector(homeBtnPressed)];
+    self.navigationItem.rightBarButtonItem = barButton;
+
+}
+
+- (void) homeBtnPressed {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
